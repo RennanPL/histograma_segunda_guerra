@@ -1,0 +1,15 @@
+europa_ww <- data.frame(
+  país = c("Alemanha", "França", "Espanha", "Portugal", "Itália"),
+  posicionamento = c(1, 2, 3, 3, 1),
+  regime = c(1, 2, 1, 1, 1 ),
+  primeira_guerra = c(1, 2, 3, 2, 2)
+)
+View(europa_ww)
+
+par(mfrow=c(2,2))
+for (i in 2:4) {
+hist(europa_ww[, i], main = names(europa_ww)[i], xlab = "Valor da variável", ylab = "Frequência")
+}
+#Posicionamento: 1 = eixo, 2 = aliados 3 = neutralidade 
+#regime: 1 = fascismo, 2 = democracia
+#primeira_guerra: 1 = Tríplice Aliança, 2 = Tríplice Entente, 3 = neutralidade
